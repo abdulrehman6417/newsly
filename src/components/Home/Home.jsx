@@ -7,12 +7,14 @@ const Home = ({ menu, search }) => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const apiKey = String(import.meta.env.VITE_NEWS_API_KEY);
+
   const getNews = () => {
     setLoading(true);
     fetch(
       `https://newsapi.org/v2/${
         menu ? menu : "top-headlines?country=us"
-      }&apiKey=a8c41cc0675a41d0bc8702d92c4e6be7`
+      }&apiKey=${apiKey}`
     )
       .then((response) => response.json())
       .then((jsonData) => {

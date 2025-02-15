@@ -10,13 +10,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: String(import.meta.env.REACT_APP_FIREBASE_API_KEY),
-  authDomain: "newsly-fb1f6.firebaseapp.com",
-  projectId: "newsly-fb1f6",
-  storageBucket: "newsly-fb1f6.firebasestorage.app",
-  messagingSenderId: "23127376598",
-  appId: "1:23127376598:web:7131dad4a801ca6e1e7f77",
-  measurementId: "G-RM61B1Z53S",
+  apiKey: String(import.meta.env.VITE_FIREBASE_API_KEY),
+  authDomain: String(import.meta.env.VITE_AUTH_DOMAIN),
+  projectId: String(import.meta.env.VITE_PROJECT_ID),
+  storageBucket: String(import.meta.env.VITE_STORAGE_BUCKET),
+  messagingSenderId: String(import.meta.env.VITE_MESSAGING_SENDER_ID),
+  appId: String(import.meta.env.VITE_APP_ID),
+  measurementId: String(import.meta.env.VITE_MEASUREMENT_ID),
 };
 
 // Initialize Firebase
